@@ -1,0 +1,125 @@
+.navbar {
+    position: sticky;
+    background: #2e2d2d;
+    top: 0;
+    z-index: 2;
+
+    nav {
+        box-shadow: -1px 4px 8px rgb(255 255 255 / 12%);
+        position: sticky;
+        
+        img {
+            width: 50px;
+        }
+        .nav-links {
+            gap: 15px;
+            ul {
+                gap: 25px;
+                cursor: pointer;
+
+                li {
+                    font-weight: 400;
+                }
+                li:hover {
+                    color: rgb(161, 158, 158);
+                }
+            }
+            .nav-search {
+                font-family: cursive;
+                padding: 5px 5px;
+                background: #ffffff42;
+                gap: 5px;
+                border-radius: 20px;
+                font-size: 13px;
+                width: 183px;
+                padding-left: 12px;
+                height: 27px;
+                cursor: text;
+
+                &:hover {
+                    color: rgb(161, 158, 158);
+                }
+            }
+        }
+    }
+}
+
+.homeHeader {
+    gap: 30px;
+    padding: 0 80px;
+    background: linear-gradient(rgb(0 0 0 / 53%), rgb(118 118 118 / 41%)), url(/src/assets/Background/Home-BG.jpg);
+    background-size: cover;
+    background-position: center;
+    color: rgb(255 255 255);
+
+    h1 {
+        font-size: 70px;
+        font-weight: 900;
+        color: #41b5b0;
+
+    }
+    .mainHeader {
+        border-left: 15px solid #41b5b061;
+        padding: 0 15px;
+
+        .first {
+            font-size: 25px;
+            padding: 0 5px;
+            margin-bottom: -25px;
+            font-weight: 500;
+        }
+        .second {
+            font-size: 15px;
+            font-weight: 600;
+            padding: 0 5px;
+            margin-top: -17px;
+        }
+        .third {
+            padding: 0 5px;
+            font-size: 33px;
+            font-weight: 700;
+            color: #41b5b0;
+            margin-top: -5px;
+        }
+    }
+    .secondHeader {
+        width: 500px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffffb3;
+        margin-top: -15px;
+        padding: 10px 10px;
+        border: 3px solid #ffffff33;
+        border-radius: 10px;
+        margin-left: 0px;
+
+        p {
+        }
+    }
+    .buttonHeader {
+
+        button {
+            padding: 7px 15px;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: -17px;
+            height: 50px;
+            width: 120px;
+            cursor: pointer;
+        }
+        .find {
+            background: #007a006e;
+            
+            &:hover {
+                background: #007a00e2;
+            }
+        }
+        .post {
+            background: #921616a8;
+            &:hover {
+                background: #921616e4;
+            }
+        }
+    }
+}
