@@ -46,7 +46,7 @@
 
 .homeHeader {
     gap: 30px;
-    padding: 0 80px;
+    padding: 0 0;
     background: linear-gradient(rgb(0 0 0 / 53%), rgb(118 118 118 / 41%)), url(/src/assets/Background/Home-BG.jpg);
     background-size: cover;
     background-position: center;
@@ -61,6 +61,7 @@
     .mainHeader {
         border-left: 15px solid #41b5b061;
         padding: 0 15px;
+        margin: 0 80px;
 
         .first {
             font-size: 25px;
@@ -91,12 +92,13 @@
         padding: 10px 10px;
         border: 3px solid #ffffff33;
         border-radius: 10px;
-        margin-left: 0px;
+        margin: 0 80px;
 
         p {
         }
     }
     .buttonHeader {
+        margin: 0 80px;
 
         button {
             padding: 7px 15px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import Logos from './Logos'
 
 function Header() {
   return (
@@ -18,6 +19,7 @@ function Header() {
         <button className='find'>Find Jobs</button>
         <button className='post'>Post a Job</button>
       </div>
+      <Logos />
     </div>
   )
 }
