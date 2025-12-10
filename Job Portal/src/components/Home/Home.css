@@ -47,7 +47,7 @@
 .homeHeader {
     gap: 30px;
     padding: 0 0;
-    background: linear-gradient(rgb(0 0 0 / 53%), rgb(118 118 118 / 41%)), url(/src/assets/Background/Home-BG.jpg);
+    background: linear-gradient(rgb(0 0 0 / 53%), rgb(233 230 255)), url(/src/assets/Background/Home-BG.jpg);
     background-size: cover;
     background-position: center;
     color: rgb(255 255 255);
@@ -122,6 +122,75 @@
             &:hover {
                 background: #921616e4;
             }
+        }
+    }
+}
+
+.aboutSection {
+    background: #e7e4fc;
+    justify-content: space-evenly;
+    padding: 0 40px;
+    height: 75dvh;
+
+    .aboutText {
+        display: flex;
+        padding: 75px 0;
+
+        .heading {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+
+            h2 {
+                font-size: 35px;
+                font-weight: 700;
+                padding: 0 0;
+                margin-bottom: 15px;
+                margin-top: -10px;
+            }
+            img {
+                width: 200px;
+            }
+        }
+        .aboutList {
+
+            ul {
+
+                li {
+
+                }
+            }
+        }
+    }
+    
+    .aboutVideo {
+
+        video {
+            width: 500px;
+            border-radius: 20px;
+        }
+    }
+}
+
+.review-container {
+    background: #e7e4fc;
+    height: 100dvh;
+
+    h1 {
+
+    }
+    img {
+        
+    }
+    .quotesSection {
+        height: 300px;
+        width: 100%;
+
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 100px;
+            box-shadow: #00000063 0px 0px 20px;
         }
     }
 }
