@@ -183,14 +183,26 @@
         
     }
     .quotesSection {
-        height: 300px;
+        height: 150px;
         width: 100%;
 
         img {
-            width: 180px;
-            height: 180px;
+            width: 120px;
+            height: 120px;
             border-radius: 100px;
             box-shadow: #00000063 0px 0px 20px;
         }
     }
+}
+
+.certCard {
+    transition: 0.3s;
+    .cet-image {
+        img {
+            transition: 0.3s;
+        }
+    }
+}
+.certCard:hover {
+    box-shadow: #00000073 0px -1px 10px 7px;
 }
