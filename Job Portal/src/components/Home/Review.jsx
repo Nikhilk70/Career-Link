@@ -4,9 +4,16 @@ import aristotel from "../../assets/cmpy_logos/aristoteles.jpeg";
 import PeterDrucker from "../../assets/cmpy_logos/PeterDrucker.jpeg";
 import PabloPicasso from "../../assets/cmpy_logos/PabloPicasso.jpeg";
 import python from "../../assets/courses/pythonImg.jpg";
+import django from "../../assets/courses/django.png";
+import dsa from "../../assets/courses/DSA.png";
+import js from "../../assets/courses/js.png";
+import mern from "../../assets/courses/mern.jpg";
+import nodeJs from "../../assets/courses/nodeJs.png";
+import react from "../../assets/courses/react.png";
+import rest from "../../assets/courses/rest.jpg";
+import database from "../../assets/courses/database.jpg";
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import CertificationCard from './Certifications';
 
 
 function QuotesCard({ quote, name, image, fade }) {
@@ -21,31 +28,6 @@ function QuotesCard({ quote, name, image, fade }) {
         <p className='w-full text-right mr-5'>- {name}</p>
       </div>
       <img src={image} alt="" className='w-[150px] rounded-xl' />
-    </div>
-  )
-}
-
-function Certifications() {
-  return (
-    <div className='certCard bg-white w-[320px] px-3 py-2 h-[385px] rounded-[5px] hover:w-[330px] flex flex-col gap-2'>
-      <div className='cet-image w-full flex justify-center items-center'>
-        <img src={python} alt="" className='w-[300px] rounded-[6px] hover:w-[310px]'/>
-      </div>
-      <div className='cert-heading'>
-        <h2 className='font-bold'>Python Programming Language</h2>
-      </div>
-      <div>
-        <h4 className='font-bold text-[14px]'>Skills</h4>
-        <p className='text-[13px] font-normal'>Programming Principles, Data Structures, 
-          Data Import/Export, Object Oriented Programming (OOP), 
-          Python Programming, Application Programming Interface (API) ...</p>
-      </div>
-      <div className='flex gap-3 items-center'>
-        <span className='text-[14px] font-bold'><FontAwesomeIcon icon={faStar} />4.6K</span><p className='text-[11px] font-medium'> 20K reviews</p>
-      </div>
-      <div>
-        <p className='text-[17px] font-light'>Beginner 1-2 Months</p>
-      </div>
     </div>
   )
 }
@@ -76,6 +58,73 @@ function Review() {
     },
   ]
 
+  const certifications = [
+    {
+      image: python,
+      title: "Python Programming Language",
+      skills: "Programming Principles, Data Structures, OOP, APIs, File Handling...",
+      rating: "4.6",
+      reviews: "20K"
+    },
+    {
+      image: js,
+      title: "JavaScript for Web Development",
+      skills: "ES6, DOM, Async JS, APIs, React Basics...",
+      rating: "4.5",
+      reviews: "18K"
+    },
+    {
+      image: react,
+      title: "React Frontend Development",
+      skills: "Components, Hooks, Routing, State Management...",
+      rating: "4.7",
+      reviews: "25K"
+    },
+    {
+      image: django,
+      title: "Backend Development with Django",
+      skills: "Models, Views, REST APIs, Authentication, ORM...",
+      rating: "4.6",
+      reviews: "22K"
+    },
+    {
+      image: nodeJs,
+      title: "Node.js & Express Backend",
+      skills: "REST APIs, Middleware, MongoDB, Authentication...",
+      rating: "4.5",
+      reviews: "16K"
+    },
+    {
+      image: mern,
+      title: "Full Stack Web Development",
+      skills: "HTML, CSS, JavaScript, React, Node.js, Databases...",
+      rating: "4.8",
+      reviews: "30K"
+    },
+    {
+      image: dsa,
+      title: "Data Structures & Algorithms",
+      skills: "Arrays, Stacks, Queues, Trees, Graphs, Problem Solving...",
+      rating: "4.7",
+      reviews: "28K"
+    },
+    {
+      image: rest,
+      title: "REST API Development",
+      skills: "API Design, Authentication, CRUD, Performance...",
+      rating: "4.6",
+      reviews: "19K"
+    },
+    {
+      image: database,
+      title: "Database Management Systems",
+      skills: "SQL, PostgreSQL, Indexing, Relationships, Optimization...",
+      rating: "4.4",
+      reviews: "14K"
+    }
+  ]
+
+
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -91,13 +140,31 @@ function Review() {
   }, [quotes.length]);
 
   return (
-    <div className='review-container'>
-      <div>
-        <QuotesCard quote={quotes[index].qoute} name={quotes[index].name} image={quotes[index].image} fade={fade}/>
+    <div className='review-container flex flex-col gap-9'>
+      <div className='px-5 flex flex-col gap-5'>
+        <div className='w-full flex justify-center py-4 text-[45px] font-bold'>
+          <h1>Career-Link Certifications</h1>
+        </div>
+          <div
+            className='grid gap-7
+            grid-cols-1
+            sm:grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-3
+            2xl:grid-cols-3
+            place-items-center'
+          >
+            {certifications.map((cert, index) => (
+              <CertificationCard key={index} {...cert} />
+            ))}
+          </div>
+          <div className='w-full flex justify-center'>
+            <button className='bg-amber-50 py-[5px] px-[10px] rounded-[8px] text-[17px] font-bold'>More..</button>
+          </div>
       </div>
       <div>
-        <h1>Career-Link Certifications</h1>
-        <Certifications />
+        <QuotesCard quote={quotes[index].qoute} name={quotes[index].name} image={quotes[index].image} fade={fade}/>
       </div>
         <h1>This is Review section</h1>
     </div>
