@@ -2,7 +2,12 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div>
+      <div className='footer-header'>
+        <h1>Career Link</h1>
+        <p>All in One Place</p>
+      </div>
+    </div>
   )
 }
 

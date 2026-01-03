@@ -20,7 +20,7 @@ function About() {
       </div>
       <div className='aboutVideo flex items-center justify-center'>
         <video
-          src="https://res.cloudinary.com/dxjdraawa/video/upload/v173183/videoplayback_kdxk91.mp4"
+          src="https://res.cloudinary.com/dxjdraawa/video/upload/Untitled_video_1_zqfoxe.mp4"
           autoPlay
           muted
           loop

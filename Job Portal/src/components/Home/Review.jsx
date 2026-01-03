@@ -166,7 +166,6 @@ function Review() {
       <div>
         <QuotesCard quote={quotes[index].qoute} name={quotes[index].name} image={quotes[index].image} fade={fade}/>
       </div>
-        <h1>This is Review section</h1>
     </div>
   )
 }
